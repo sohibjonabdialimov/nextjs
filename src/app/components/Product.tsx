@@ -1,15 +1,31 @@
 "use client";
 
 import Link from "next/link";
-import { FC } from "react";
+import { FC, useState } from "react";
 import { ProductType } from "../interface";
 import Image from "next/image";
-import { Card, Col, Row } from "antd";
+import { Card, Col, Row, Button, Modal } from "antd";
 
 const Product: FC<{ product: ProductType }> = ({ product }) => {
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const showModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleOk = () => {
+    setIsModalOpen(false);
+  };
+
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <>
-      <Col span={8} style={{padding: "10px"}}>
+   
+      <Col span={8} style={{ padding: "10px" }}>
         <Card bordered={true}>
           <Link
             href={`/product/${product.id}`}
@@ -17,7 +33,7 @@ const Product: FC<{ product: ProductType }> = ({ product }) => {
           >
             <div className="relative max-h-80 flex-1">
               <Card>{product.title}</Card>
-              <div style={{textAlign: "center"}}>
+              <div style={{ textAlign: "center" }}>
                 <Image
                   src={product.image}
                   alt={product.title}
