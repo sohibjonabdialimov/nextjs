@@ -7,8 +7,6 @@ import Image from "next/image";
 import { Card, Col, Row } from "antd";
 
 const Product: FC<{ product: ProductType }> = ({ product }) => {
-  // const res = await fetch("https://fakestoreapi.com/products");
-  // const products: ProductType = await res.json();
   return (
     <>
       <Col span={8} style={{padding: "10px"}}>

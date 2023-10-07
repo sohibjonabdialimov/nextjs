@@ -14,14 +14,6 @@ export default async function Item() {
   console.log(params);
 
   return (
-    // <div>
-    //   <div className="">
-    //     <h1>{params.slug}</h1>
-
-    //     <h2>{product.title}</h2>
-    //     <p>{product.description}</p>
-    //   </div>
-    // </div>
     <Card
     bordered={false}
       style={{ width: "650px", textAlign: "center", margin: "auto", padding: "15px 100px" }}
@@ -34,10 +26,6 @@ export default async function Item() {
         />
       }
     >
-      {/* <Meta
-        title={product.title}
-        description={product.description}
-      /> */}
      <h1><b>Product title:</b> {product.title}</h1>
      <p><b>Product price:</b> {product.price}</p>
      <p><b>Product description:</b> {product.description}</p>
