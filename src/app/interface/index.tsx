@@ -8,3 +8,10 @@ export interface ProductType {
 	quantity: number;
 	rating: { rate: number; count: number };
 }
+export interface ProductJsonType {
+	albumId: number;
+	id: number;
+	title: string;
+	url: string;
+	thumbnailUrl: string;
+}
